@@ -1,0 +1,21 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<body>
+<div style="padding: 10px;">
+
+    <h2> Welcome to IIoT Industry Pioneer Blog  ...</h2>
+    <h5> The World's top resources for Food Consumption.</h5><hr /><br />
+    
+</div>
+<div style="padding: 10px;">
+<%# For further DB output! %>
+    <% data.forEach(dt => { %>
+        <h4 style="padding: 2px;"><a href="/world_food/<%= dt.country %>"><%= dt.country %> </a></h4>
+        
+       
+        <hr /><br/>
+       <% }) %>
+</div>
+    
+</body>
+<%- include('../partials/footer1') %>

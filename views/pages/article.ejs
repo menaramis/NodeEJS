@@ -1,0 +1,25 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<body>
+<div style="padding: 10px;">
+
+    <h2> Welcome to IIoT Industry Pioneer Blog  ...</h2>
+    <h5> The World's top R&D resources for Industrial IoT.</h5><hr /><br />
+    
+</div>
+<div style="padding: 10px;">
+<%# For further DB output! %>
+   
+        <h4 style="padding: 2px;"><%= data.title %></h4>
+        <p><%= data.body %></p><hr /> <br/>
+     
+</div>
+<form action="/delete/<%= data.title %>" method="post">
+    <div class="text-end"  style="margin-right: 10px;">
+        <button type="submit" class="btn btn-secondary me-2">Edit</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </div>
+</form>
+
+</body>
+<%- include('../partials/footer1') %>

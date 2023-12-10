@@ -1,0 +1,24 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<body>
+<div style="padding: 10px;">
+
+    <h2> Welcome to IIoT Industry Pioneer Blog  ...</h2>
+    <h5> The World's top R&D resources for Industrial IoT.</h5><hr /><br />
+    
+</div>
+<div style="padding: 10px;">
+<%# For further DB output! %>
+    <% data.forEach(post => { %>
+        <h4 style="padding: 2px;"><%= post.title %></h4>
+        <p><%= post.body.substr(0,150) %><a href="/articles/<%= post.title %>">  more</a> </p>
+        <div class="text-end"  style="margin-right: 10px;">
+            <button type="button" class="btn btn-secondary me-2">Edit</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+        </div>
+        <hr /><br/>
+       <% }) %>
+</div>
+    
+</body>
+<%- include('../partials/footer1') %>
